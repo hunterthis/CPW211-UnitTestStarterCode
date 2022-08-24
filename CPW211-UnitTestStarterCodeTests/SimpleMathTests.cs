@@ -21,10 +21,10 @@ namespace CPW211_UnitTestStarterCode.Tests
             // Use the DataRow values to test the Add method
 
             double aPlusb = a + b;
+            
+            double isAPlusb =  SimpleMath.Add(a, b); //will add both numbers
 
-            SimpleMath.Add(a, b); //will add both numbers
-
-            Assert.IsTrue((a + b) == aPlusb); //check if result is same as test
+            Assert.AreEqual(isAPlusb, aPlusb); //check if result is same as test
         }
 
         [TestMethod]
