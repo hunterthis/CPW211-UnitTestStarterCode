@@ -36,9 +36,9 @@ namespace CPW211_UnitTestStarterCode.Tests
         {
             double aTimesb = a * b;
 
-            SimpleMath.Multiply(a, b); 
+            double result = SimpleMath.Multiply(a, b); 
 
-            Assert.IsTrue((a * b) == aTimesb); //check if result is same as test
+            Assert.AreEqual(result, aTimesb); //check if result is same as test
         }
 
         [TestMethod]
@@ -49,9 +49,9 @@ namespace CPW211_UnitTestStarterCode.Tests
             // "Denominator cannot be zero"
 
             double b = 0;
-            SimpleMath.Divide(a,b);
+           double result = SimpleMath.Divide(a,b);
 
-            Assert.IsTrue((a / b) == 0); //check if result is positive or not
+            Assert.AreEqual(result, b); //check if result is positive or not
         }
 
        
@@ -64,9 +64,9 @@ namespace CPW211_UnitTestStarterCode.Tests
 
             double aDivb = a / b;
 
-            SimpleMath.Divide(a, b);
+            double result = SimpleMath.Divide(a, b);
 
-            Assert.IsTrue((a / b) == aDivb); //check if result is positive or not
+            Assert.AreEqual(result, aDivb); //check if result is positive or not
         }
     }
 }
